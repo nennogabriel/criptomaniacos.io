@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NextLink from 'next/link';
 import {
   Button,
@@ -17,6 +17,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { SocialIconLink } from '../SocialIconLink';
+import { debounce } from '../../util/debounce';
 
 const menuLinks = [
   { label: 'Contato', link: '#contato' },
@@ -45,17 +46,45 @@ export function HeaderBase() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce({
+    func: () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setVisible(
+        (prevScrollPos > currentScrollPos &&
+          prevScrollPos - currentScrollPos > 70) ||
+          currentScrollPos < 10
+      );
+
+      setPrevScrollPos(currentScrollPos);
+    },
+    wait: 200,
+  });
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
   return (
     <>
       <Flex
         py={{ base: 4, xl: 8 }}
         px={{ base: 4, xl: 12 }}
         align="center"
-        position="absolute"
+        position="fixed"
+        transition="transform 0.2s"
+        transform={visible ? 'translateY(0)' : 'translateY(-110%)'}
         top={0}
         left={0}
         right={0}
         color="white"
+        bg={prevScrollPos > 0 ? 'blue.800' : 'transparent'}
+        zIndex="10"
       >
         <Button
           ref={btnRef}
@@ -73,14 +102,15 @@ export function HeaderBase() {
             <img width="200px" height="100%" src="/images/logo-topo.svg" />
           </Button>
         </NextLink>
+
         <Flex as="nav" align="center" grow={1} ml={8}>
           <Stack
             direction={['row']}
             spacing={8}
             display={{ base: 'none', lg: 'block' }}
           >
-            {menuLinks.map((link) => (
-              <NextLink href={link.link} key={link.label}>
+            {menuLinks.map((link, index) => (
+              <NextLink href={link.link} key={index}>
                 <Link>{link.label}</Link>
               </NextLink>
             ))}
@@ -91,8 +121,8 @@ export function HeaderBase() {
             spacing={6}
             display={{ base: 'none', lg: 'block' }}
           >
-            {menuButtons.map((btn) => (
-              <NextLink href={btn.link} key={btn.label}>
+            {menuButtons.map((btn, index) => (
+              <NextLink href={btn.link} key={index}>
                 <Button
                   as="a"
                   variant={btn.variant}
@@ -109,6 +139,7 @@ export function HeaderBase() {
           </Stack>
         </Flex>
       </Flex>
+
       <Drawer
         isOpen={isOpen}
         placement="left"
@@ -126,15 +157,15 @@ export function HeaderBase() {
 
           <DrawerBody py={4}>
             <Stack color="white" textAlign="center" spacing={6} py={4}>
-              {menuLinks.map((link) => (
-                <NextLink href={link.link} key={link.label}>
+              {menuLinks.map((link, index) => (
+                <NextLink href={link.link} key={index}>
                   <Link>{link.label}</Link>
                 </NextLink>
               ))}
             </Stack>
             <Stack textAlign="center" spacing={6} py={4}>
-              {menuButtons.map((btn) => (
-                <NextLink href={btn.link} key={btn.label}>
+              {menuButtons.map((btn, index) => (
+                <NextLink href={btn.link} key={index}>
                   <Button as="a" variant={btn.variant} colorScheme="brand">
                     {btn.label}
                   </Button>

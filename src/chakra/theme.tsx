@@ -3,6 +3,7 @@ import colors from './colors';
 import global from './global';
 import { Button } from './components/Button';
 import { Link } from './components/Link';
+import { Table } from './components/Table';
 
 const theme = extendTheme({
   colors,
@@ -15,6 +16,7 @@ const theme = extendTheme({
   components: {
     Button,
     Link,
+    Table,
   },
 });
 

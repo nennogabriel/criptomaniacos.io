@@ -21,9 +21,9 @@ export function FooterBase() {
       px={{ base: 4, xl: 12 }}
       direction="column"
     >
-      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={8}>
-        <Box>
-          <img src="/images/logo-rodape.svg" width="90%" />
+      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={8} pt={10}>
+        <Box width="90%" mx={{ base: 'auto', lg: 0 }}>
+          <img src="/images/logo-rodape.svg" width="100%" />
         </Box>
         <Stack direction="row" spacing={10} fontSize="xl">
           <Stack spacing={6}>
