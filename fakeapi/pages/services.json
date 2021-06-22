@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "slug": "sinais-para-trade",
+    "title": "Sinais para Trade",
+    "plans": [1, 2],
+    "headline": "Saiba qual moeda comprar e a que preço vender! Day trade nos pares BTC e USD",
+    "image": "/images/pages/services_01.png",
+    "content": [
+      "Receba diariamente indicação de moedas, com informação sobre o preço de compra e alvos para a venda, de forma a maximizar seus lucros. A Criptomaníacos emite sinais tanto de Bitcoin quanto de Altcoins, no par BTC e USD. Tudo para facilitar sua vida!"
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "analises-graficas",
+    "title": "Análises Gráficas",
+    "plans": [1, 2],
+    "image": "/images/pages/services_02.png",
+    "headline": "Saiba qual moeda comprar e a que preço vender! Day trade nos pares BTC e USD",
+    "content": [
+      "Gráficos costumam antecipar futuros movimentos e ter acesso à análises detalhadas, antes dos outros, por gerar lucro ou evitar prejuízos. Na Criptomaníacos você está sempre bem informado, recebendo essas informações diariamente!"
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "tutoriais",
+    "title": "Tutoriais",
+    "plans": [1, 2],
+    "image": "/images/pages/services_03.png",
+    "headline": "Dúvidas? Com os Tutoriais você recebe o passo-a-passo, em texto e vídeo, para fazer qualquer coisa: Carteiras, Exchanges, Trade, etc.",
+    "content": [
+      "Qual a melhor carteira do mercado e como utilizá-la? Como criar conta numa exchange e operar com segurança?",
+      "São muitas dúvidas e o tempo gasto em pesquisa na internet é enorme.",
+      "Na Criptomaníacos, você encontra todas as respostas, em tutoriais simples e de fácil entendimento, com o passo-a-passo para cada atividade."
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "grupo-vip",
+    "title": "Grupo VIP",
+    "plans": [1, 2],
+    "image": "/images/pages/services_04.png",
+    "headline": "Tire suas dúvidas junto a Traders e Analistas experientes.",
+    "content": [
+      "Já pensou em ter uma equipe experiente te dando suporte online sempre que necessário?",
+      "Na Criptomaníacos, você não opera sozinho e isso faz toda a diferença no seu resultado final. Todos os clientes fazem parte de um Grupo VIP na rede social Telegram, onde podem interagir, comentar notícias, solicitar análises gráficas de moedas, etc."
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "robo-de-estrategias-e-sinais",
+    "title": "Robô de Estratégias e Sinais",
+    "plans": [2],
+    "image": "/images/pages/services_05.png",
+    "headline": "Escolha diferentes Estratégias de trading automatizadas conforme o nível de risco que está disposto a tomar.",
+    "content": [
+      "Geralmente, ao receber um Sinal indicando uma moeda para comprar, você precisa fazer login na corretora, encontrar a moeda, realizar a compra e monitorar, de forma a vendê-la assim que o preço atingir algum dos alvos indicados por nossa equipe."
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "analise-de-moedas",
+    "title": "Análise de Moedas/Projetos",
+    "plans": [2],
+    "image": "/images/pages/services_06.png",
+    "headline": "Material completo sobre as principais criptomoedas do mercado: Times, Tecnologia, Cronograma, Potencial de valorização, etc.",
+    "content": ["ssss"]
+  },
+  {
+    "id": "7",
+    "slug": "pedido-de-analise-grafica",
+    "title": "Pedidos de Análise Gráfica",
+    "plans": [2],
+    "image": "/images/pages/services_07.png",
+    "headline": "Peça para uma equipe especialista em trade analisar graficamente o ativo de sua preferência.",
+    "content": [""]
+  }
+]

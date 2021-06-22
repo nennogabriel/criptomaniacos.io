@@ -1,0 +1,74 @@
+{
+  "auth": {},
+  "security": {
+    "departments": {},
+    "roles": {},
+    "users": {}
+  },
+  "users": {},
+  "lgpd": {},
+  "settings": {
+    "mail": {},
+    "templates": {},
+    "asaas": {},
+    "kamoney": {}
+  },
+  "shop": {
+    "settings": {},
+    "shippings": {},
+    "payments": {}
+  },
+  "clients": {},
+  "plans": {},
+  "courses": {},
+  "telegram": {
+    "content": {},
+    "signals": {},
+    "vip": {},
+    "strategies": {},
+    "bans": {}
+  },
+  "cuppons": {},
+  "subscriptions": {},
+  "reports": {
+    "payments": {},
+    "courses": {},
+    "balance": {},
+    "plans": {}
+  },
+  "contents": {
+    "posts": {},
+    "pages": {
+      "services": [
+        {
+          "slug": "sinais-para-trade",
+          "title": "Sinais para Trade",
+          "plans": ["basic", "premium"],
+          "headline": "Saiba qual moeda comprar e a que preço vender! Day trade nos pares BTC e USD",
+          "image": "/images/",
+          "content": [
+            "Receba diariamente indicação de moedas, com informação sobre o preço de compra e alvos para a venda, de forma a maximizar seus lucros. A Criptomaníacos emite sinais tanto de Bitcoin quanto de Altcoins, no par BTC e USD. Tudo para facilitar sua vida!"
+          ]
+        },
+        {
+          "slug": "analises-graficas",
+          "title": "Análises Gráficas",
+          "plans": ["basic", "premium"],
+          "headline": "Saiba qual moeda comprar e a que preço vender! Day trade nos pares BTC e USD",
+          "content": [
+            "Gráficos costumam antecipar futuros movimentos e ter acesso à análises detalhadas, antes dos outros, por gerar lucro ou evitar prejuízos. Na Criptomaníacos você está sempre bem informado, recebendo essas informações diariamente!"
+          ]
+        }
+      ]
+    },
+    "tutorials": {},
+    "faqs": {},
+    "analysis": {
+      "graphics": {}
+    },
+    "categories": {},
+    "tags": {},
+    "authors": {},
+    "courses": {}
+  }
+}

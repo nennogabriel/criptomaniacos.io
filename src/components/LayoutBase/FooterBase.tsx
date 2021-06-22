@@ -25,7 +25,7 @@ export function FooterBase() {
         <Box width="90%" mx={{ base: 'auto', lg: 0 }}>
           <img src="/images/logo-rodape.svg" width="100%" />
         </Box>
-        <Stack direction="row" spacing={10} fontSize="xl">
+        <Stack direction="row" spacing={10} fontSize="xl" justify="center">
           <Stack spacing={6}>
             <NextLink href="#servicos">
               <Link>Serviços</Link>

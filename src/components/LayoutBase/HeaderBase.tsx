@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import {
+  Box,
   Button,
   Center,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
@@ -21,7 +22,7 @@ import { debounce } from '../../util/debounce';
 
 const menuLinks = [
   { label: 'Contato', link: '#contato' },
-  { label: 'Serviços', link: '#Serviços' },
+  { label: 'Serviços', link: '/servicos' },
   { label: 'Planos', link: '#Planos' },
   { label: 'Loja', link: '#Loja' },
   { label: 'Blog', link: '#Blog' },
@@ -46,6 +47,8 @@ export function HeaderBase() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
+  const { pathname } = useRouter();
+  const [isHomePage, setIsHomePage] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -65,10 +68,14 @@ export function HeaderBase() {
   });
 
   useEffect(() => {
+    setIsHomePage(pathname === '/');
+  }, []);
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
+  }, [handleScroll]);
 
   return (
     <>
@@ -83,8 +90,10 @@ export function HeaderBase() {
         left={0}
         right={0}
         color="white"
-        bg={prevScrollPos > 0 ? 'blue.800' : 'transparent'}
+        bg={prevScrollPos > 0 || !isHomePage ? 'blue.800' : 'transparent'}
         zIndex="10"
+        maxW="1920px"
+        m="0 auto"
       >
         <Button
           ref={btnRef}
@@ -139,6 +148,7 @@ export function HeaderBase() {
           </Stack>
         </Flex>
       </Flex>
+      {!isHomePage && <Box bg="blue.800" w="100%" minH="72px" />}
 
       <Drawer
         isOpen={isOpen}
