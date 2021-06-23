@@ -61,8 +61,10 @@ export default function Home({ services }) {
           <SimpleGrid columns={4} spacing={4}>
             {services?.map((service) => (
               <Box key={service.id} position="relative">
-                <NextLink href="#">
+                <NextLink href={`/servicos/${service.slug}`}>
                   <Flex
+                    as="a"
+                    cursor="pointer"
                     direction="column"
                     alignItems="center"
                     textAlign="center"

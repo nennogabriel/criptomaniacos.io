@@ -115,7 +115,7 @@ export function HeaderBase() {
         <Flex as="nav" align="center" grow={1} ml={8}>
           <Stack
             direction={['row']}
-            spacing={8}
+            spacing={6}
             display={{ base: 'none', lg: 'block' }}
           >
             {menuLinks.map((link, index) => (
@@ -129,6 +129,7 @@ export function HeaderBase() {
             direction={['row']}
             spacing={6}
             display={{ base: 'none', lg: 'block' }}
+            alignItems="flex-end"
           >
             {menuButtons.map((btn, index) => (
               <NextLink href={btn.link} key={index}>
