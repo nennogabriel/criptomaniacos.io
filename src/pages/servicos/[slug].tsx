@@ -61,8 +61,6 @@ export async function getStaticPaths() {
 
   const data = services.map(service => {return { params: { slug: service.slug } }})
 
-  console.log(data)
-
   return {
     paths: data,
     fallback: true,

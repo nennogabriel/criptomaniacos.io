@@ -58,7 +58,7 @@ export default function Home({ services }) {
               </Flex>
             ))}
           </Stack>
-          <SimpleGrid columns={4} spacing={4}>
+          <SimpleGrid columns={{base: 2, md: 4}} spacing={4}>
             {services?.map((service) => (
               <Box key={service.id} position="relative">
                 <NextLink href={`/servicos/${service.slug}`}>
@@ -74,10 +74,10 @@ export default function Home({ services }) {
                     height="100%"
                   >
                     <img src={service.image} />
-                    <Text my={8} fontWeight="bold">
+                    <Text my={8} fontWeight="bold" px={4}>
                       {service.title}
                     </Text>
-                    <Box flex={1}>
+                    <Box flex={1} px={4}>
                       <Text>{service.headline}</Text>
                     </Box>
 
